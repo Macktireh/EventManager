@@ -4,7 +4,7 @@ volumes:
 services:
   db:
     image: postgres:16-alpine
-    container_name: event_manager_db
+    container_name: event_manager_local_postgres_16-alpine
     env_file:
       - ./.env
     volumes:
@@ -14,7 +14,7 @@ services:
 
   pgadmin:
     image: elestio/pgadmin:REL-8_13
-    container_name: event_manager_pgAdmin
+    container_name: event_manager_local_pgAdmin
     env_file:
       - ./.env
     ports:

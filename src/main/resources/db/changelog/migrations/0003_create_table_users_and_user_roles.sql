@@ -3,7 +3,6 @@ DATE: 2024-12-08 13:40:14
 DESCRIPTION: Create the users table and user_roles table
 */
 
-
 CREATE TABLE IF NOT EXISTS users 
 (
     id BIGSERIAL PRIMARY KEY,

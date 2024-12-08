@@ -3,7 +3,6 @@ DATE: 2024-12-08 13:40:14
 DESCRIPTION: Create the events table
 */
 
-
 CREATE TABLE IF NOT EXISTS events 
 (
     id BIGSERIAL PRIMARY KEY,

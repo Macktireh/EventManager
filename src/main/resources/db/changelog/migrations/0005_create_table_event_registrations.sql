@@ -1,0 +1,15 @@
+/*
+DATE: 2024-12-08 13:40:14
+DESCRIPTION: Create the event_registrations table
+*/
+
+CREATE TABLE IF NOT EXISTS event_registrations 
+(
+    id BIGSERIAL PRIMARY KEY,
+    public_id UUID NOT NULL UNIQUE DEFAULT gen_random_uuid(),
+    event_id BIGINT NOT NULL REFERENCES events(id) ON DELETE CASCADE,
+    user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    status VARCHAR(36) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

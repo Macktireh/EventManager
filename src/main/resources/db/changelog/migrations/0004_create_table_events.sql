@@ -1,0 +1,17 @@
+/*
+DATE: 2024-12-08 13:40:14
+DESCRIPTION: Create the events table
+*/
+
+CREATE TABLE IF NOT EXISTS events 
+(
+    id BIGSERIAL PRIMARY KEY,
+    public_id UUID NOT NULL UNIQUE DEFAULT gen_random_uuid(),
+    name VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    date TIMESTAMP NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    attendees INT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

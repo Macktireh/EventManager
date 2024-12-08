@@ -3,7 +3,6 @@ DATE: 2024-12-08 13:34:30
 DESCRIPTION: Create the roles table and insert default roles
 */
 
-
 CREATE TABLE IF NOT EXISTS roles 
 (
     id BIGSERIAL PRIMARY KEY,
